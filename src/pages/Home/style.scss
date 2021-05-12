@@ -1,0 +1,32 @@
+.Home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding-left: 0px;
+
+        li .LinkToGifs {
+            background-color: rgba(255, 255, 255, .8);
+            margin: 5px;
+            border-radius: 50px;
+            color: #282c34;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 5px 10px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 1);
+                box-shadow: 3px 3px 10px #121314;
+            }
+        }
+    }
+}

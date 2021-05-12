@@ -1,25 +1,33 @@
 // import { useState } from 'react';
 import { Link, Route } from "wouter"
 import './App.css';
-import ListOfGifs from './components/ListOfGifs';
+import Detail from "./pages/Detail";
+import Home from "./pages/Home";
+import SearchResults from "./pages/SearchResults";
+import StaticContext from './context/StaticContext'
+import { GifsContextProvider } from "./context/GifsContext";
 
 
 function App() {
-  // const [keyword, setKeyword] = useState('panda')
-
   return (
-    <div className="App">
-      <section className="App-content">
-        <h1>APP</h1>
-        <Link to='/gif/rick'>Gifs de Rick</Link>
-        <Link to='/gif/morty'>Gifs de Morty</Link>
-        <Link to='/gif/panda'>Gifs de Pandas</Link>
-        <Route
-          path="/gif/:keyword"
-          component={ListOfGifs} />
-        {/* <button onClick={()=> setKeyword('mapache')}>Cambiar keyword</button> */}
-      </section>
-    </div>
+    <StaticContext.Provider value= {{name:'Lupe', suscribeteAlCanal: true}}>
+      <div className="App">
+        <section className="App-content">
+          <Link to='/' className="Logo">Giffy</Link>
+          <GifsContextProvider>
+          <Route
+            path="/"
+            component={Home} />
+          <Route
+            path="/search/:keyword"
+            component={SearchResults} />
+          <Route
+            path="/gif/:id"
+            component={Detail} />
+            </GifsContextProvider>
+        </section>
+      </div>
+    </StaticContext.Provider>
   );
 }
 

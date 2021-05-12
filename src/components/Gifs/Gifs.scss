@@ -1,0 +1,20 @@
+.Gif{
+    border: none;
+    // width: 33%;
+    height: fit-content;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+    h4 {
+        color: #282c34;
+        font-weight: 400;
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, .8);
+        position: absolute;
+        bottom: 0;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+}
