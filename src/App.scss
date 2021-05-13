@@ -34,7 +34,7 @@
   flex-shrink: 2;
 }
 
-.Category {
+.App-category {
   width: 40%;
   margin-bottom: 25px;
   @media screen and (max-width: 950px) {
@@ -50,7 +50,7 @@
     flex-direction: initial;
   }
 
-  .Category {
+  .App-category {
     padding: 0 2em;
     margin-bottom: 25px;
     position: sticky;

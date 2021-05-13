@@ -1,5 +1,5 @@
-import Gif from '../../components/Gifs/Gifs'
-import useGlobalGifs from '../../hooks/useGlobalGifs'
+import Gif from 'components/Gifs/Gifs'
+import useGlobalGifs from 'hooks/useGlobalGifs'
 import './detail-styles.scss'
 
 export default function Detail({ params }) {
