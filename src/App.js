@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 import { Link, Route } from "wouter"
-import './App.css';
+import './App.scss';
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import SearchResults from "./pages/SearchResults";

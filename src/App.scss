@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+.App-content {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.Logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+  color: antiquewhite;
+  text-decoration: none;
+  margin: 25px;
+}
+
+/*----------*/
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App-results {
+  flex-shrink: 2;
+}
+
+.Category {
+  width: 40%;
+  margin-bottom: 25px;
+  @media screen and (max-width: 950px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .App-main {
+    flex-direction: initial;
+  }
+
+  .Category {
+    padding: 0 2em;
+    margin-bottom: 25px;
+    position: sticky;
+    top: 0;
+  }
+}
