@@ -22,10 +22,10 @@ export function useGifs({ keyword } = { keyword: null }) {
         setLoading(false)
         localStorage.setItem('lastKeyword', keyword)
       })
-  }, [keyword], keywordToUse)
+  }, [keyword, keywordToUse, setGifs])
 
   useEffect(function () {
-    if(page === INITIAL_PAGE || !loading){
+    if(page !== INITIAL_PAGE){
 
       setLoadingNextPage(true)
 
@@ -35,7 +35,7 @@ export function useGifs({ keyword } = { keyword: null }) {
         setLoadingNextPage(false)
       })
     }
-  }, [keywordToUse, page])
+  }, [keywordToUse, page, setGifs])
 
   return { loading, loadingNextPage, gifs, setPage }
 }
