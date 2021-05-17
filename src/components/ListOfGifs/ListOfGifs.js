@@ -1,5 +1,5 @@
-import Gif from '../Gifs/Gifs'
-import './style.css'
+import Gif from 'components/Gifs/Gifs'
+import './style.scss'
 
 export default function ListOfGifs({ gifs }) {
 
