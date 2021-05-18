@@ -1,25 +1,33 @@
+@import './variables.scss';
+
 .App {
   text-align: center;
+
+  .App-title {
+    text-align: left;
+  }
 }
 
 .App-content {
-  background-color: #282c34;
+  background-color: $primary-dark;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $primary-light;
   padding: 16px;
   box-sizing: border-box;
 }
 
 .Logo {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: $font-comforta;
   font-size: 80px;
-  color: antiquewhite;
+  color: $primary-light;
   text-decoration: none;
   margin: 25px;
+  font-weight: 700;
+
 }
 
 /*----------*/
@@ -30,17 +38,24 @@
   align-items: flex-start;
 }
 
-// .App-results {
-//   width: 80%;
-  
-// }
+.App-results {
+  flex-shrink: 2;
+  width: 100%;
+}
 
 .App-category {
   flex-shrink: 4;
-    margin-bottom: 25px;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 640px) {
+    width: 40%;
+    max-width: 300px;
+  }
+
   @media screen and (max-width: 950px) {
     width: 30%;
   }
+
   @media screen and (max-width: 640px) {
     width: 100%;
   }
